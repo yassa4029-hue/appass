@@ -1,414 +1,744 @@
-I'm
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="ياسا عزيز - Portfolio شخصي">
-  <title>ياسا عزيز | Portfolio</title>
+    <meta name="description" content="Yassa Aziz - Personal Portfolio">
+    <meta name="author" content="Yassa Aziz">
 
-  <link rel="stylesheet" href="style.css">
+    <title>Yassa Aziz | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-<header class="navbar">
+    <!-- Background -->
+    <div class="background">
+        <div class="grid"></div>
 
-  <a class="logo" href="#home">
-    ياسا<span>.</span>
-  </a>
-
-  <nav>
-    <a href="#about" data-ar="عني" data-en="About">عني</a>
-    <a href="#skills" data-ar="المهارات" data-en="Skills">المهارات</a>
-    <a href="#projects" data-ar="المشاريع" data-en="Projects">المشاريع</a>
-    <a href="#contact" data-ar="تواصل" data-en="Contact">تواصل</a>
-  </nav>
-
-  <!-- زر تغيير اللغة -->
-  <button id="languageBtn" class="language-btn" type="button">
-    English 🇬🇧
-  </button>
-
-</header>
-
-
-<main>
-
-<!-- HERO -->
-
-<section id="home" class="hero">
-
-  <div class="hero-content">
-
-    <p
-      class="eyebrow"
-      data-ar="مرحبًا، أنا"
-      data-en="Hello, I'm">
-      مرحبًا، أنا
-    </p>
-
-    <h1
-      data-ar="ياسا عزيز"
-      data-en="Yassa Aziz">
-      ياسا عزيز
-    </h1>
-
-    <h2
-      data-ar="طالب 🚀"
-      data-en="Student 🚀">
-      طالب 🚀
-    </h2>
-
-    <p
-      class="intro"
-      data-ar="طالب مهتم بالتكنولوجيا والألعاب وتعلّم أشياء جديدة، وأسعى دائمًا لتطوير نفسي وبناء مشاريع وتجارب أفضل."
-      data-en="A student interested in technology, gaming, and learning new things. I'm always working to improve myself and build better projects and experiences.">
-      طالب مهتم بالتكنولوجيا والألعاب وتعلّم أشياء جديدة، وأسعى دائمًا لتطوير نفسي وبناء مشاريع وتجارب أفضل.
-    </p>
-
-    <div class="buttons">
-
-      <a
-        class="btn primary"
-        href="#contact"
-        data-ar="تواصل معي"
-        data-en="Contact Me">
-        تواصل معي
-      </a>
-
-      <a
-        class="btn secondary"
-        href="#about"
-        data-ar="اعرف عني أكثر"
-        data-en="Learn More">
-        اعرف عني أكثر
-      </a>
-
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
     </div>
 
-  </div>
 
+    <!-- Navigation -->
+    <header class="navbar">
 
-  <div class="hero-card">
+        <a href="#home" class="logo">
+            <span class="logo-symbol">&lt;/&gt;</span>
+            <span>Yassa<span class="dot">.</span></span>
+        </a>
 
-    <div class="avatar">
-      YA
-    </div>
 
-    <p>Yassa Aziz</p>
+        <nav class="nav-links">
 
-    <span
-      data-ar="طالب / مشاريع مستقبلية"
-      data-en="Student / Future Projects">
-      طالب / مشاريع مستقبلية
-    </span>
+            <a href="#home"
+               class="active"
+               data-en="Home"
+               data-ar="الرئيسية">
+                Home
+            </a>
 
-  </div>
+            <a href="#about"
+               data-en="About"
+               data-ar="عني">
+                About
+            </a>
 
-</section>
+            <a href="#skills"
+               data-en="Skills"
+               data-ar="المهارات">
+                Skills
+            </a>
 
+            <a href="#projects"
+               data-en="Projects"
+               data-ar="المشاريع">
+                Projects
+            </a>
 
-<!-- ABOUT -->
+            <a href="#contact"
+               data-en="Contact"
+               data-ar="تواصل">
+                Contact
+            </a>
 
-<section id="about" class="section">
+        </nav>
 
-  <p
-    class="eyebrow"
-    data-ar="تعرف عليّ"
-    data-en="Get to know me">
-    تعرف عليّ
-  </p>
 
-  <h2
-    class="section-title"
-    data-ar="نبذة عني"
-    data-en="About Me">
-    نبذة عني
-  </h2>
+        <div class="nav-actions">
 
-  <div class="about-box">
+            <button class="language-btn" id="languageBtn">
+                AR
+            </button>
 
-    <p
-      data-ar="أنا ياسا عزيز، طالب مهتم بالتكنولوجيا والكمبيوتر والألعاب، وأحب تجربة الحلول الجديدة والتعلّم من المشاريع العملية. هذا الموقع هو الـ Portfolio الشخصي الخاص بي، وسأضيف إليه مشاريعي وإنجازاتي مع الوقت."
-      data-en="I'm Yassa Aziz, a student interested in technology, computers, and gaming. I enjoy trying new solutions and learning through practical projects. This website is my personal portfolio, and I'll add more projects and achievements over time.">
+            <button class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-      أنا ياسا عزيز، طالب مهتم بالتكنولوجيا والكمبيوتر والألعاب، وأحب تجربة الحلول الجديدة والتعلّم من المشاريع العملية. هذا الموقع هو الـ Portfolio الشخصي الخاص بي، وسأضيف إليه مشاريعي وإنجازاتي مع الوقت.
+        </div>
 
-    </p>
+    </header>
 
-  </div>
 
-</section>
+    <main>
 
+        <!-- =========================
+             HERO
+        ========================== -->
 
-<!-- SKILLS -->
+        <section class="section hero" id="home">
 
-<section id="skills" class="section">
+            <div class="hero-content reveal">
 
-  <p
-    class="eyebrow"
-    data-ar="ماذا أستطيع أن أفعل؟"
-    data-en="What can I do?">
-    ماذا أستطيع أن أفعل؟
-  </p>
+                <div class="status">
 
-  <h2
-    class="section-title"
-    data-ar="المهارات"
-    data-en="Skills">
-    المهارات
-  </h2>
+                    <span class="status-dot"></span>
 
+                    <span
+                        data-en="Available for learning & building"
+                        data-ar="متاح للتعلم وبناء مشاريع جديدة">
+                        Available for learning & building
+                    </span>
 
-  <div class="grid">
+                </div>
 
-    <article class="card">
 
-      <span>🧠</span>
+                <p class="hero-small"
+                   data-en="Hello, I'm"
+                   data-ar="أهلاً، أنا">
+                    Hello, I'm
+                </p>
 
-      <h3
-        data-ar="حل المشكلات"
-        data-en="Problem Solving">
-        حل المشكلات
-      </h3>
 
-      <p
-        data-ar="البحث عن حلول عملية للمشكلات التقنية واليومية."
-        data-en="Finding practical solutions to technical and everyday problems.">
-        البحث عن حلول عملية للمشكلات التقنية واليومية.
-      </p>
+                <h1>
+                    Yassa
+                    <span>Aziz</span>
+                </h1>
 
-    </article>
 
+                <h2
+                    data-en="Student • Tech Enthusiast • Builder"
+                    data-ar="طالب • مهتم بالتكنولوجيا • صانع مشاريع">
+                    Student • Tech Enthusiast • Builder
+                </h2>
 
-    <article class="card">
 
-      <span>⚡</span>
+                <p class="hero-description"
+                   data-en="I enjoy exploring technology, experimenting with new ideas, and understanding how things work instead of simply using them."
+                   data-ar="أحب استكشاف التكنولوجيا، تجربة أفكار جديدة، وفهم طريقة عمل الأشياء بدلًا من استخدامها فقط.">
+                    I enjoy exploring technology, experimenting with new ideas,
+                    and understanding how things work instead of simply using them.
+                </p>
 
-      <h3
-        data-ar="التعلّم السريع"
-        data-en="Fast Learning">
-        التعلّم السريع
-      </h3>
 
-      <p
-        data-ar="تجربة الأدوات والتقنيات الجديدة والتعلّم منها."
-        data-en="Exploring new tools and technologies and learning from them.">
-        تجربة الأدوات والتقنيات الجديدة والتعلّم منها.
-      </p>
+                <div class="hero-buttons">
 
-    </article>
+                    <a href="#projects" class="btn primary">
 
+                        <span
+                            data-en="View Projects"
+                            data-ar="شاهد مشاريعي">
+                            View Projects
+                        </span>
 
-    <article class="card">
+                        <span class="arrow">↗</span>
 
-      <span>💻</span>
+                    </a>
 
-      <h3
-        data-ar="التكنولوجيا"
-        data-en="Technology">
-        التكنولوجيا
-      </h3>
 
-      <p
-        data-ar="اهتمام بالكمبيوتر والبرامج والألعاب والتقنيات الحديثة."
-        data-en="Interested in computers, software, gaming, and modern technology.">
-        اهتمام بالكمبيوتر والبرامج والألعاب والتقنيات الحديثة.
-      </p>
+                    <a href="#contact" class="btn secondary">
 
-    </article>
+                        <span
+                            data-en="Contact Me"
+                            data-ar="تواصل معي">
+                            Contact Me
+                        </span>
 
+                    </a>
 
-    <article class="card">
+                </div>
 
-      <span>🎯</span>
+            </div>
 
-      <h3
-        data-ar="التركيز"
-        data-en="Focus">
-        التركيز
-      </h3>
 
-      <p
-        data-ar="العمل على الوصول للنتيجة المطلوبة خطوة بخطوة."
-        data-en="Working toward the desired result step by step.">
-        العمل على الوصول للنتيجة المطلوبة خطوة بخطوة.
-      </p>
+            <!-- Code Window -->
 
-    </article>
+            <div class="hero-card reveal">
 
-  </div>
+                <div class="terminal">
 
-</section>
+                    <div class="terminal-header">
 
+                        <div class="terminal-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
 
-<!-- PROJECTS -->
+                        <span>portfolio.js</span>
 
-<section id="projects" class="section">
+                    </div>
 
-  <p
-    class="eyebrow"
-    data-ar="ما الذي أبنيه؟"
-    data-en="What am I building?">
-    ما الذي أبنيه؟
-  </p>
 
-  <h2
-    class="section-title"
-    data-ar="المشاريع"
-    data-en="Projects">
-    المشاريع
-  </h2>
+                    <div class="terminal-body">
 
+                        <p>
+                            <span class="purple">const</span>
+                            <span class="blue">developer</span>
+                            =
+                            <span class="orange">{</span>
+                        </p>
 
-  <div class="project-card">
 
-    <div class="project-icon">
-      🚀
-    </div>
+                        <p class="indent">
+                            name:
+                            <span class="green">'Yassa Aziz'</span>,
+                        </p>
 
-    <div>
 
-      <h3
-        data-ar="المشروع الأول قادم"
-        data-en="First Project Coming Soon">
-        المشروع الأول قادم
-      </h3>
+                        <p class="indent">
+                            passion:
+                            <span class="green">'Technology'</span>,
+                        </p>
 
-      <p
-        data-ar="سأضيف هنا مشاريعي وروابطها وصورًا عنها عندما تصبح جاهزة."
-        data-en="I'll add my projects, links, and images here when they are ready.">
-        سأضيف هنا مشاريعي وروابطها وصورًا عنها عندما تصبح جاهزة.
-      </p>
 
-    </div>
+                        <p class="indent">
+                            learning:
+                            <span class="green">'Always'</span>,
+                        </p>
 
-  </div>
 
-</section>
+                        <p class="indent">
+                            creativity:
+                            <span class="green">true</span>
+                        </p>
 
 
-<!-- CONTACT -->
+                        <p>
+                            <span class="orange">}</span>;
+                        </p>
 
-<section id="contact" class="section contact-section">
 
-  <p
-    class="eyebrow"
-    data-ar="لنتحدث"
-    data-en="Let's talk">
-    لنتحدث
-  </p>
+                        <p class="cursor-line">
+                            <span class="terminal-cursor"></span>
+                        </p>
 
-  <h2
-    class="section-title"
-    data-ar="تواصل معي"
-    data-en="Contact Me">
-    تواصل معي
-  </h2>
+                    </div>
 
+                </div>
 
-  <div class="contact-grid">
+            </div>
 
 
-    <!-- Phone -->
+            <div class="scroll-indicator">
 
-    <a
-      class="contact-card"
-      href="tel:+201223785355">
+                <span></span>
 
-      <span>📞</span>
+                <small
+                    data-en="Scroll down"
+                    data-ar="اسحب للأسفل">
+                    Scroll down
+                </small>
 
-      <div>
+            </div>
 
-        <strong
-          data-ar="اتصال هاتفي"
-          data-en="Phone Call">
-          اتصال هاتفي
-        </strong>
+        </section>
 
-        <small>
-          01223785355
-        </small>
 
-      </div>
 
-    </a>
+        <!-- =========================
+             ABOUT
+        ========================== -->
 
+        <section class="section about" id="about">
 
-    <!-- Email -->
+            <div class="section-heading reveal">
 
-    <a
-      class="contact-card"
-      href="mailto:yassa4029@gmail.com">
+                <span class="section-number">
+                    01
+                </span>
 
-      <span>📧</span>
+                <div>
 
-      <div>
+                    <p class="eyebrow"
+                       data-en="Get to know me"
+                       data-ar="تعرف عليّ">
+                        Get to know me
+                    </p>
 
-        <strong
-          data-ar="البريد الإلكتروني"
-          data-en="Email">
-          البريد الإلكتروني
-        </strong>
+                    <h2
+                        data-en="Who am I?"
+                        data-ar="من أنا؟">
+                        Who am I?
+                    </h2>
 
-        <small>
-          yassa4029@gmail.com
-        </small>
+                </div>
 
-      </div>
+            </div>
 
-    </a>
 
+            <div class="about-grid">
 
-    <!-- WhatsApp -->
 
-    <a
-      class="contact-card"
-      href="https://wa.me/201223785355"
-      target="_blank"
-      rel="noopener">
+                <div class="about-text reveal">
 
-      <span>💬</span>
+                    <p class="large-text"
+                       data-en="I'm Yassa, a student interested in technology, computers, and everything that helps me understand the digital world more deeply."
+                       data-ar="أنا يسى، طالب مهتم بالتكنولوجيا والكمبيوتر وكل شيء يجعلني أفهم العالم الرقمي بشكل أعمق.">
+                        I'm Yassa, a student interested in technology,
+                        computers, and everything that helps me understand
+                        the digital world more deeply.
+                    </p>
 
-      <div>
 
-        <strong
-          data-ar="واتساب"
-          data-en="WhatsApp">
-          واتساب
-        </strong>
+                    <p
+                       data-en="For me, learning doesn't stop at watching tutorials or reading information. I like experimenting, making mistakes, fixing problems, and understanding the real reason behind them."
+                       data-ar="بالنسبة لي، التعلم لا يتوقف عند مشاهدة شرح أو قراءة معلومة. أحب أن أجرب بنفسي، أخطئ، أصلح المشكلة، وأفهم السبب الحقيقي وراءها.">
+                        For me, learning doesn't stop at watching tutorials
+                        or reading information. I like experimenting,
+                        making mistakes, fixing problems, and understanding
+                        the real reason behind them.
+                    </p>
 
-        <small
-          data-ar="ابدأ محادثة معي"
-          data-en="Start a chat with me">
-          ابدأ محادثة معي
-        </small>
+                </div>
 
-      </div>
 
-    </a>
+                <div class="about-stats reveal">
 
-  </div>
+                    <div class="stat-card">
 
-</section>
+                        <span class="stat-icon">⌘</span>
 
-</main>
+                        <strong>01</strong>
 
+                        <p
+                            data-en="Always curious"
+                            data-ar="فضول دائم">
+                            Always curious
+                        </p>
 
-<footer>
+                    </div>
 
-  <span
-    data-ar="© 2026 ياسا عزيز — صُنع بـ ❤️"
-    data-en="© 2026 Yassa Aziz — Made with ❤️">
-    © 2026 ياسا عزيز — صُنع بـ ❤️
-  </span>
 
-</footer>
+                    <div class="stat-card">
 
+                        <span class="stat-icon">⚡</span>
 
-<script src="script.js"></script>
+                        <strong>02</strong>
 
-</body>
-  </html> 
+                        <p
+                            data-en="Hands-on learning"
+                            data-ar="تعلم عملي">
+                            Hands-on learning
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">◈</span>
+
+                        <strong>03</strong>
+
+                        <p
+                            data-en="Problem solving"
+                            data-ar="حل المشكلات">
+                            Problem solving
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">∞</span>
+
+                        <strong>04</strong>
+
+                        <p
+                            data-en="Continuous growth"
+                            data-ar="تطوير مستمر">
+                            Continuous growth
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+
+        <section class="section skills" id="skills">
+
+            <div class="section-heading reveal">
+
+                <span class="section-number">
+                    02
+                </span>
+
+                <div>
+
+                    <p class="eyebrow"
+                       data-en="What I use"
+                       data-ar="ما أستخدمه">
+                        What I use
+                    </p>
+
+                    <h2
+                        data-en="Skills & Interests"
+                        data-ar="المهارات والاهتمامات">
+                        Skills & Interests
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+
+                <article class="skill-card reveal">
+
+                    <div class="skill-top">
+
+                        <span class="skill-number">
+                            01
+                        </span>
+
+                        <span class="skill-icon">
+                            &lt;/&gt;
+                        </span>
+
+                    </div>
+
+                    <h3>HTML</h3>
+
+                    <p
+                        data-en="Building web pages and structuring their content clearly."
+                        data-ar="بناء صفحات الويب وتنظيم محتواها بطريقة واضحة.">
+                        Building web pages and structuring their content clearly.
+                    </p>
+
+                    <div class="skill-line">
+                        <span></span>
+                    </div>
+
+                </article>
+
+
+
+                <article class="skill-card reveal">
+
+                    <div class="skill-top">
+
+                        <span class="skill-number">
+                            02
+                        </span>
+
+                        <span class="skill-icon">
+                            { }
+                        </span>
+
+                    </div>
+
+                    <h3>CSS</h3>
+
+                    <p
+                        data-en="Designing interfaces and improving the visual experience."
+                        data-ar="تصميم الواجهات وتحسين شكل وتجربة الموقع.">
+                        Designing interfaces and improving the visual experience.
+                    </p>
+
+                    <div class="skill-line">
+                        <span></span>
+                    </div>
+
+                </article>
+
+
+
+                <article class="skill-card reveal">
+
+                    <div class="skill-top">
+
+                        <span class="skill-number">
+                            03
+                        </span>
+
+                        <span class="skill-icon">
+                            JS
+                        </span>
+
+                    </div>
+
+                    <h3>JavaScript</h3>
+
+                    <p
+                        data-en="Adding interaction, motion, and dynamic functionality."
+                        data-ar="إضافة التفاعل والحركة والوظائف الديناميكية.">
+                        Adding interaction, motion, and dynamic functionality.
+                    </p>
+
+                    <div class="skill-line">
+                        <span></span>
+                    </div>
+
+                </article>
+
+
+
+                <article class="skill-card reveal">
+
+                    <div class="skill-top">
+
+                        <span class="skill-number">
+                            04
+                        </span>
+
+                        <span class="skill-icon">
+                            ⚙
+                        </span>
+
+                    </div>
+
+                    <h3
+                        data-en="Technology"
+                        data-ar="التكنولوجيا">
+                        Technology
+                    </h3>
+
+                    <p
+                        data-en="Exploring computers, software, and solving technical problems."
+                        data-ar="استكشاف الكمبيوتر والبرامج وحل المشاكل التقنية.">
+                        Exploring computers, software, and solving technical problems.
+                    </p>
+
+                    <div class="skill-line">
+                        <span></span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
+        <section class="section projects" id="projects">
+
+            <div class="section-heading reveal">
+
+                <span class="section-number">
+                    03
+                </span>
+
+                <div>
+
+                    <p class="eyebrow"
+                       data-en="My work"
+                       data-ar="أعمالي">
+                        My work
+                    </p>
+
+                    <h2
+                        data-en="Projects"
+                        data-ar="المشاريع">
+                        Projects
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-feature reveal">
+
+                <div class="project-number">
+                    01
+                </div>
+
+
+                <div class="project-content">
+
+                    <span class="project-label"
+                          data-en="Personal project"
+                          data-ar="مشروع شخصي">
+                        Personal project
+                    </span>
+
+
+                    <h3>
+                        Portfolio Website
+                    </h3>
+
+
+                    <p
+                        data-en="A personal website designed to showcase skills, interests, and projects through a modern interface."
+                        data-ar="موقع شخصي مصمم لعرض المهارات والاهتمامات والمشاريع بطريقة عصرية.">
+                        A personal website designed to showcase skills,
+                        interests, and projects through a modern interface.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+
+                    </div>
+
+
+                    <a href="#contact" class="project-link">
+
+                        <span
+                            data-en="Learn more"
+                            data-ar="اعرف المزيد">
+                            Learn more
+                        </span>
+
+                        <span>↗</span>
+
+                    </a>
+
+                </div>
+
+
+                <div class="project-visual">
+
+                    <div class="visual-window">
+
+                        <div class="window-top">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="visual-code">
+
+                            <span class="line purple-line"></span>
+                            <span class="line blue-line"></span>
+                            <span class="line short"></span>
+                            <span class="line green-line"></span>
+                            <span class="line blue-line"></span>
+                            <span class="line short"></span>
+                            <span class="line purple-line"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="coming-soon reveal">
+
+                <div>
+
+                    <span class="mini-icon">
+                        +
+                    </span>
+
+                    <h3
+                        data-en="More projects coming soon"
+                        data-ar="المزيد من المشاريع قريبًا">
+                        More projects coming soon
+                    </h3>
+
+                    <p
+                        data-en="This section will grow with every new project."
+                        data-ar="هذه الصفحة ستتطور مع كل مشروع جديد.">
+                        This section will grow with every new project.
+                    </p>
+
+                </div>
+
+
+                <span class="coming-arrow">
+                    →
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section class="section contact" id="contact">
+
+            <div class="contact-box reveal">
+
+                <div class="contact-content">
+
+                    <span class="eyebrow"
+                          data-en="Let's talk"
+                          data-ar="لنتحدث">
+                        Let's talk
+                    </span>
+
+
+                    <h2
+                        data-en="Have an idea?"
+                        data-ar="عندك فكرة؟">
+                        Have an idea?
+                    </h2>
+
+
+                    <p
+                        data-en="If you have a project, an idea, or simply a question, feel free to reach out."
+                        data-ar="لو عندك مشروع، فكرة، أو حتى مجرد سؤال، تقدر تتواصل معي.">
+                        If you have a project, an idea, or simply a question,
+                        feel free to reach out.
+                    </p>
+
+
+                    <!-- حط إيميلك الحقيقي هنا -->
+                    <a href="mailto:YOUR_EMAIL@example.com"
+                       class="email-link">
+
+                        YOUR_EMAIL@example.com
+
+                        <span>↗</span>
+
+                    </a>
+
+                </div>
+
+
+                <div class="contact-decorati
