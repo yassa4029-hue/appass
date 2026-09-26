@@ -1,10 +1,10 @@
 // =========================================================
-// Yassy Aziz — Portfolio
+// Yassa Aziz — Portfolio
 // =========================================================
 
 const translations = {
   en: {
-    brand: "Yassy",
+    brand: "Yassa",
     nav_about: "About",
     nav_skills: "Skills",
     nav_projects: "Projects",
@@ -18,7 +18,7 @@ const translations = {
     hero_cta_contact: "Get in touch",
 
     about_title: "About me",
-    about_p1: "I'm Yassy — a student who got hooked on technology the moment I realized I could build things instead of just using them. What started as curiosity about how websites work turned into a habit of taking things apart, breaking them, and figuring out how to make them work again — better than before.",
+    about_p1: "I'm Yassa — a student who got hooked on technology the moment I realized I could build things instead of just using them. What started as curiosity about how websites work turned into a habit of taking things apart, breaking them, and figuring out how to make them work again — better than before.",
     about_p2: "I don't learn well from watching alone. I learn by opening the console, writing the wrong code first, reading the error, and trying again. That loop — build, break, fix, understand — is how I actually pick things up.",
     trait1_h: "Curious by default",
     trait1_p: "Always asking how something works under the hood.",
@@ -212,7 +212,7 @@ function getSearchIndex() {
   return [
     {
       id: "about",
-      en: { title: "About Yassy", desc: "Student & software builder — the story behind the site." },
+      en: { title: "About Yassa", desc: "Student & software builder — the story behind the site." },
       ar: { title: "نبذة عني", desc: "طالب وباني برمجيات — القصة اللي وراء الموقع." },
       keywords: ["about", "yassy", "student", "نبذة", "طالب", "يسى", "عني"],
     },
