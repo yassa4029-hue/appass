@@ -1,685 +1,300 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0E14">
+<meta name="description" content="Yassy Aziz — Student, developer, tech enthusiast.">
+<title>Yassy Aziz — Portfolio</title>
 
-    <meta name="theme-color" content="#080812">
-    <meta name="description" content="The personal portfolio of Yassa.">
-    <meta name="author" content="Yassa">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <title>Yassa | Personal Portfolio</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- ==============================
-         NAVIGATION
-    =============================== -->
+<!-- ===== Background grid / glow ===== -->
+<div class="bg-fx" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+</div>
 
-    <header class="navbar">
-        <div class="nav-container">
+<!-- ===== Header ===== -->
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">Y</span>
+      <span class="brand-text" data-i18n="brand">Yassy</span>
+    </a>
 
-            <a href="#home" class="logo" aria-label="Home">
-                Y<span>.</span>
-            </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+      <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
+      <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
+      <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+    </nav>
 
-            <nav class="nav-links" id="navLinks">
-                <a href="#home" data-en="Home" data-ar="الرئيسية">
-                    Home
-                </a>
+    <div class="header-actions">
+      <button id="search-open" class="icon-btn" type="button" aria-label="Search">
+        <span aria-hidden="true">&#8981;</span>
+      </button>
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">
+        <span class="lang-current">EN</span><span class="lang-sep">/</span><span class="lang-other">AR</span>
+      </button>
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
 
-                <a href="#about" data-en="About" data-ar="عني">
-                    About
-                </a>
-
-                <a href="#skills" data-en="Skills" data-ar="مهاراتي">
-                    Skills
-                </a>
-
-                <a href="#projects" data-en="Projects" data-ar="مشاريعي">
-                    Projects
-                </a>
-
-                <a href="#contact" data-en="Contact" data-ar="تواصل معي">
-                    Contact
-                </a>
-            </nav>
-
-            <div class="nav-actions">
-
-                <button
-                    type="button"
-                    class="search-open"
-                    id="searchOpen"
-                    aria-label="Open search"
-                    title="Search"
-                >
-                    <span aria-hidden="true">⌕</span>
-                </button>
-
-                <button
-                    type="button"
-                    class="language-btn"
-                    id="languageToggle"
-                    aria-label="Change language"
-                >
-                    AR
-                </button>
-
-                <button
-                    type="button"
-                    class="menu-toggle"
-                    id="menuToggle"
-                    aria-label="Open menu"
-                    aria-expanded="false"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-            </div>
-        </div>
-    </header>
-
-
-    <!-- ==============================
-         SEARCH PANEL
-    =============================== -->
-
-    <div
-        class="search-overlay"
-        id="searchOverlay"
-        aria-hidden="true"
-    >
-        <div
-            class="search-panel"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="searchTitle"
-        >
-
-            <div class="search-heading">
-                <h2
-                    id="searchTitle"
-                    data-en="Search"
-                    data-ar="بحث"
-                >
-                    Search
-                </h2>
-
-                <button
-                    type="button"
-                    class="search-close"
-                    id="searchClose"
-                    aria-label="Close search"
-                >
-                    &times;
-                </button>
-            </div>
-
-            <form id="searchForm" class="search-form">
-                <input
-                    type="search"
-                    id="searchInput"
-                    placeholder="Search the website..."
-                    data-en-placeholder="Search the website..."
-                    data-ar-placeholder="ابحث في الموقع..."
-                    autocomplete="off"
-                    aria-label="Search the website"
-                >
-
-                <button
-                    type="submit"
-                    class="btn btn-primary"
-                    data-en="Search"
-                    data-ar="ابحث"
-                >
-                    Search
-                </button>
-            </form>
-
-            <p
-                class="search-hint"
-                id="searchHint"
-                data-en="Search for information on this website."
-                data-ar="ابحث عن المعلومات الموجودة في الموقع."
-            >
-                Search for information on this website.
-            </p>
-
-            <div
-                class="search-results"
-                id="searchResults"
-                aria-live="polite"
-            ></div>
-
-        </div>
+<!-- ===== Search overlay ===== -->
+<div class="search-overlay" id="search-overlay" aria-hidden="true">
+  <div class="search-panel" role="dialog" aria-modal="true" aria-labelledby="search-title">
+    <div class="search-top">
+      <h2 id="search-title" data-i18n="search_title">Search</h2>
+      <button type="button" id="search-close" class="icon-btn" aria-label="Close search">&times;</button>
     </div>
 
+    <div class="search-input-wrap">
+      <span class="search-input-icon" aria-hidden="true">&#8981;</span>
+      <input
+        type="text"
+        id="search-input"
+        data-i18n-placeholder="search_placeholder"
+        placeholder="Search — try a name, section, or phone number"
+        autocomplete="off"
+      >
+    </div>
 
-    <!-- ==============================
-         MAIN CONTENT
-    =============================== -->
+    <p class="search-hint" id="search-hint" data-i18n="search_hint">
+      Try things like "contact", "phone", "skills" or "projects".
+    </p>
 
-    <main>
+    <div class="search-results" id="search-results" aria-live="polite"></div>
+  </div>
+</div>
 
-        <!-- HERO -->
+<main>
 
-        <section class="hero" id="home">
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-identity">
+          <span class="avatar">
+            <img src="profile.jpg" alt="Yassy Aziz" id="profileImage"
+                 onerror="this.parentElement.classList.add('avatar-empty'); this.remove();">
+            <span class="avatar-fallback">Y</span>
+          </span>
+          <p class="hero-kicker" data-i18n="hero_kicker">Currently building &amp; learning</p>
+        </div>
 
-            <div class="hero-content">
+        <h1 class="hero-title">
+          <span data-i18n="hero_hi">Hi, I'm</span>
+          <span class="hero-name">Yassy Aziz</span>
+        </h1>
+        <p class="hero-role" data-i18n="hero_role">Student &amp; Software Builder</p>
+        <p class="hero-desc" data-i18n="hero_desc">
+          I design and build things for the web — learning by doing, breaking things on purpose, and putting them back together better.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" data-i18n="hero_cta_projects">See my work</a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="hero_cta_contact">Get in touch</a>
+        </div>
+      </div>
 
-                <div
-                    class="status"
-                    data-en="Welcome to my personal website"
-                    data-ar="أهلًا بيك في موقعي الشخصي"
-                >
-                    Welcome to my personal website
-                </div>
+      <div class="hero-panel">
+        <div class="code-window">
+          <div class="code-window-bar">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            <span class="code-filename">profile.js</span>
+          </div>
+          <pre class="code-body"><code><span class="tok-key">const</span> <span class="tok-var">developer</span> = {
+  <span class="tok-prop">name</span>: <span class="tok-str">'Yassy Aziz'</span>,
+  <span class="tok-prop">role</span>: <span class="tok-str">'Student'</span>,
+  <span class="tok-prop">stack</span>: [<span class="tok-str">'HTML'</span>, <span class="tok-str">'CSS'</span>, <span class="tok-str">'JS'</span>],
+  <span class="tok-prop">mindset</span>: <span class="tok-str">'build, break, learn'</span>,
+  <span class="tok-prop">status</span>: <span class="tok-str">'open to opportunities'</span>
+};</code></pre>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+  </section>
 
-                <p
-                    class="hero-small"
-                    data-en="Hello, I'm"
-                    data-ar="أهلًا، أنا"
-                >
-                    Hello, I'm
-                </p>
+  <!-- ===== About ===== -->
+  <section class="section" id="about">
+    <div class="section-inner about-grid">
+      <div class="section-head">
+        <h2 class="section-title" data-i18n="about_title">About me</h2>
+        <div class="title-rule"></div>
+      </div>
 
-                <h1>
-                    <span class="gradient-name">Yassa</span>
-                </h1>
+      <div class="about-body">
+        <p class="about-text" data-i18n="about_p1">
+          I'm Yassy — a student who got hooked on technology the moment I realized I could build things instead of just using them. What started as curiosity about how websites work turned into a habit of taking things apart, breaking them, and figuring out how to make them work again — better than before.
+        </p>
+        <p class="about-text" data-i18n="about_p2">
+          I don't learn well from watching alone. I learn by opening the console, writing the wrong code first, reading the error, and trying again. That loop — build, break, fix, understand — is how I actually pick things up.
+        </p>
 
-                <h2
-                    class="hero-subtitle"
-                    data-en="Student · Developer · Tech Enthusiast"
-                    data-ar="طالب · مطور · مهتم بالتكنولوجيا"
-                >
-                    Student · Developer · Tech Enthusiast
-                </h2>
-
-                <p
-                    class="hero-description"
-                    data-en="Welcome to my corner of the internet. Explore my work, skills, and projects."
-                    data-ar="أهلًا بيك في موقعي الشخصي. اتفرج على شغلي ومهاراتي ومشاريعي."
-                >
-                    Welcome to my corner of the internet.
-                    Explore my work, skills, and projects.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="#projects"
-                        class="btn btn-primary"
-                        data-en="Explore Projects"
-                        data-ar="استكشف مشاريعي"
-                    >
-                        Explore Projects
-                    </a>
-
-                    <a
-                        href="#contact"
-                        class="btn btn-secondary"
-                        data-en="Contact Me"
-                        data-ar="تواصل معي"
-                    >
-                        Contact Me
-                    </a>
-
-                </div>
-
+        <div class="about-traits">
+          <div class="trait">
+            <span class="trait-icon">&#9670;</span>
+            <div>
+              <h3 data-i18n="trait1_h">Curious by default</h3>
+              <p data-i18n="trait1_p">Always asking how something works under the hood.</p>
             </div>
-
-
-            <div class="hero-visual">
-
-                <div class="profile-card">
-
-                    <div class="profile-image-wrap">
-                        <img
-                            src="profile.jpg"
-                            alt="Yassa's profile picture"
-                            class="profile-image"
-                            id="profileImage"
-                        >
-                    </div>
-
-                    <div class="profile-info">
-
-                        <span
-                            class="profile-label"
-                            data-en="THIS IS ME"
-                            data-ar="ده أنا"
-                        >
-                            THIS IS ME
-                        </span>
-
-                        <h2>Yassa</h2>
-
-                        <p
-                            data-en="Building things one step at a time."
-                            data-ar="بتعلم وببني حاجات جديدة خطوة بخطوة."
-                        >
-                            Building things one step at a time.
-                        </p>
-
-                    </div>
-
-                    <div class="profile-decoration" aria-hidden="true">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                </div>
-
+          </div>
+          <div class="trait">
+            <span class="trait-icon">&#9650;</span>
+            <div>
+              <h3 data-i18n="trait2_h">Learns by building</h3>
+              <p data-i18n="trait2_p">Tutorials are a start — real learning happens in the code.</p>
             </div>
-
-        </section>
-
-
-        <!-- ABOUT -->
-
-        <section class="section" id="about">
-
-            <div class="section-header">
-
-                <span
-                    class="section-label"
-                    data-en="GET TO KNOW ME"
-                    data-ar="اتعرف عليّ"
-                >
-                    GET TO KNOW ME
-                </span>
-
-                <h2
-                    class="section-title"
-                    data-en="About Me"
-                    data-ar="من أنا؟"
-                >
-                    About Me
-                </h2>
-
-                <p
-                    class="section-description"
-                    data-en="A little introduction about me and what I enjoy."
-                    data-ar="نبذة بسيطة عني وعن الحاجات اللي بحبها."
-                >
-                    A little introduction about me and what I enjoy.
-                </p>
-
+          </div>
+          <div class="trait">
+            <span class="trait-icon">&#9679;</span>
+            <div>
+              <h3 data-i18n="trait3_h">Comfortable with bugs</h3>
+              <p data-i18n="trait3_p">An error message is a clue, not a wall.</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="about-grid">
+  <!-- ===== Skills ===== -->
+  <section class="section section-alt" id="skills">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2 class="section-title" data-i18n="skills_title">Skills</h2>
+        <div class="title-rule"></div>
+      </div>
 
-                <article class="about-card">
+      <div class="skills-grid">
+        <div class="skill-card">
+          <span class="skill-tag">&lt;/&gt;</span>
+          <h3>HTML</h3>
+          <p data-i18n="skill_html">Structuring content clearly and semantically.</p>
+          <div class="skill-bar"><span style="--level:88%"></span></div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-tag">{ }</span>
+          <h3>CSS</h3>
+          <p data-i18n="skill_css">Designing layouts and interfaces that feel intentional.</p>
+          <div class="skill-bar"><span style="--level:82%"></span></div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-tag">JS</span>
+          <h3>JavaScript</h3>
+          <p data-i18n="skill_js">Adding logic, interaction and behavior to the page.</p>
+          <div class="skill-bar"><span style="--level:75%"></span></div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-tag">GIT</span>
+          <h3 data-i18n="skill_git_h">Version Control</h3>
+          <p data-i18n="skill_git">Tracking changes and shipping with Git &amp; GitHub.</p>
+          <div class="skill-bar"><span style="--level:70%"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                    <h3
-                        data-en="Who am I?"
-                        data-ar="أنا مين؟"
-                    >
-                        Who am I?
-                    </h3>
+  <!-- ===== Projects ===== -->
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2 class="section-title" data-i18n="projects_title">Projects</h2>
+        <div class="title-rule"></div>
+      </div>
 
-                    <p
-                        data-en="I'm Yassa, a student interested in technology, programming, and creating things on the web."
-                        data-ar="أنا يسى، طالب مهتم بالتكنولوجيا والبرمجة وصناعة الحاجات على الويب."
-                    >
-                        I'm Yassa, a student interested in technology,
-                        programming, and creating things on the web.
-                    </p>
-
-                </article>
-
-                <div class="about-stats">
-
-                    <div class="stat-card">
-                        <span class="stat-number">03</span>
-                        <span
-                            class="stat-label"
-                            data-en="Core Languages"
-                            data-ar="لغات أساسية"
-                        >
-                            Core Languages
-                        </span>
-                    </div>
-
-                    <div class="stat-card">
-                        <span class="stat-number">∞</span>
-                        <span
-                            class="stat-label"
-                            data-en="Things to Learn"
-                            data-ar="حاجات أتعلمها"
-                        >
-                            Things to Learn
-                        </span>
-                    </div>
-
-                </div>
-
+      <div class="projects-list">
+        <article class="project-card">
+          <div class="project-index">01</div>
+          <div class="project-body">
+            <h3 data-i18n="project1_h">Personal Portfolio</h3>
+            <p data-i18n="project1_p">This website — designed and built from scratch to present who I am, what I know, and what I'm working on.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
             </div>
-
-        </section>
-
-
-        <!-- SKILLS -->
-
-        <section class="section" id="skills">
-
-            <div class="section-header">
-
-                <span
-                    class="section-label"
-                    data-en="WHAT I USE"
-                    data-ar="الأدوات اللي بستخدمها"
-                >
-                    WHAT I USE
-                </span>
-
-                <h2
-                    class="section-title"
-                    data-en="My Skills"
-                    data-ar="مهاراتي"
-                >
-                    My Skills
-                </h2>
-
-                <p
-                    class="section-description"
-                    data-en="The technologies I'm learning and using."
-                    data-ar="التقنيات اللي بتعلمها وبستخدمها."
-                >
-                    The technologies I'm learning and using.
-                </p>
-
-            </div>
-
-            <div class="skills-grid">
-
-                <article class="skill-card">
-                    <div class="skill-icon">H</div>
-                    <h3>HTML</h3>
-                    <p
-                        data-en="Building the structure of websites."
-                        data-ar="بناء هيكل صفحات المواقع."
-                    >
-                        Building the structure of websites.
-                    </p>
-                </article>
-
-                <article class="skill-card">
-                    <div class="skill-icon">C</div>
-                    <h3>CSS</h3>
-                    <p
-                        data-en="Designing layouts and visual styles."
-                        data-ar="تصميم شكل المواقع وتنسيقها."
-                    >
-                        Designing layouts and visual styles.
-                    </p>
-                </article>
-
-                <article class="skill-card">
-                    <div class="skill-icon">JS</div>
-                    <h3>JavaScript</h3>
-                    <p
-                        data-en="Making websites interactive."
-                        data-ar="إضافة التفاعل والوظائف للمواقع."
-                    >
-                        Making websites interactive.
-                    </p>
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- PROJECTS -->
-
-        <section class="section" id="projects">
-
-            <div class="section-header">
-
-                <span
-                    class="section-label"
-                    data-en="WHAT I'VE BUILT"
-                    data-ar="الحاجات اللي عملتها"
-                >
-                    WHAT I'VE BUILT
-                </span>
-
-                <h2
-                    class="section-title"
-                    data-en="My Projects"
-                    data-ar="مشاريعي"
-                >
-                    My Projects
-                </h2>
-
-                <p
-                    class="section-description"
-                    data-en="A selection of my work and experiments."
-                    data-ar="مجموعة من مشاريعي وتجربتي في البرمجة."
-                >
-                    A selection of my work and experiments.
-                </p>
-
-            </div>
-
-            <div class="projects-grid">
-
-                <article class="project-card">
-
-                    <div class="project-top">
-                        <span class="project-number">01 / WEB</span>
-                        <span class="project-symbol" aria-hidden="true">
-                            ↗
-                        </span>
-                    </div>
-
-                    <h3
-                        data-en="Personal Portfolio"
-                        data-ar="موقعي الشخصي"
-                    >
-                        Personal Portfolio
-                    </h3>
-
-                    <p
-                        data-en="A personal website built with HTML, CSS, and JavaScript."
-                        data-ar="موقع شخصي معمول باستخدام HTML وCSS وJavaScript."
-                    >
-                        A personal website built with HTML, CSS,
-                        and JavaScript.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-
-                </article>
-
-
-                <article class="project-card">
-
-                    <div class="project-top">
-                        <span class="project-number">02 / MORE</span>
-                        <span class="project-symbol" aria-hidden="true">
-                            +
-                        </span>
-                    </div>
-
-                    <h3
-                        data-en="More Coming Soon"
-                        data-ar="المزيد قريبًا"
-                    >
-                        More Coming Soon
-                    </h3>
-
-                    <p
-                        data-en="New projects and experiments will be added here."
-                        data-ar="هضيف هنا مشروعات وتجارب جديدة بعدين."
-                    >
-                        New projects and experiments will be added here.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Learning</span>
-                        <span>Building</span>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACT -->
-
-        <section class="section contact-section" id="contact">
-
-            <div class="contact-box">
-
-                <div class="contact-content">
-
-                    <span
-                        class="section-label"
-                        data-en="GET IN TOUCH"
-                        data-ar="تواصل معايا"
-                    >
-                        GET IN TOUCH
-                    </span>
-
-                    <h2
-                        data-en="Let's Connect"
-                        data-ar="خلينا نتواصل"
-                    >
-                        Let's Connect
-                    </h2>
-
-                    <p
-                        data-en="Have a question or want to talk? Feel free to reach out."
-                        data-ar="عندك سؤال أو حابب تتكلم؟ تقدر تتواصل معايا."
-                    >
-                        Have a question or want to talk?
-                        Feel free to reach out.
-                    </p>
-
-                    <a
-                        href="mailto:YOUR_EMAIL@example.com"
-                        class="btn btn-primary"
-                        data-en="Send Me an Email"
-                        data-ar="ابعتلي إيميل"
-                    >
-                        Send Me an Email
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ==============================
-         PRIVATE FILES
-    =============================== -->
-
-    <section
-        class="private-section"
-        id="privateFiles"
-        hidden
-    >
-
-        <div class="private-container">
-
-            <div class="private-header">
-
-                <span
-                    class="section-label"
-                    data-en="RESTRICTED AREA"
-                    data-ar="منطقة خاصة"
-                >
-                    RESTRICTED AREA
-                </span>
-
-                <h1
-                    class="section-title"
-                    data-en="Private Files"
-                    data-ar="الملفات الخاصة"
-                >
-                    Private Files
-                </h1>
-
-                <p
-                    class="section-description"
-                    data-en="Welcome to the private files area."
-                    data-ar="أهلًا بيك في قسم الملفات الخاصة."
-                >
-                    Welcome to the private files area.
-                </p>
-
-            </div>
-
-            <article class="private-file-card">
-
-                <div class="private-file-heading">
-
-                    <div class="private-file-icon" aria-hidden="true">
-                        ▶
-                    </div>
-
-                    <div>
-                        <h2
-                            data-en="Private Video"
-                            data-ar="فيديو خاص"
-                        >
-                            Private Video
-                        </h2>
-
-                        <p
-                            data-en="Your uploaded video"
-                            data-ar="الفيديو اللي تم رفعه"
-                        >
-                            Your uploaded video
-                        </p>
-                    </div>
-
-                </div>
-
-                <video
-                    class="private-video"
-                    id="privateVideo"
-                    controls
-                    preload="metadata"
-                    playsinline
-                >
-                    <source
-                        src="private-video.mp4"
-                        type="video/mp4"
-                    >
-
-                    Your browser does not support HTML video.
-                </video>
-
-            </article>
-
-            <button
-                type="button"
-                class="b
+          </div>
+          <div class="project-link" aria-hidden="true">&#8594;</div>
+        </article>
+
+        <article class="project-card project-card-empty">
+          <div class="project-index">02</div>
+          <div class="project-body">
+            <h3 data-i18n="project2_h">More on the way</h3>
+            <p data-i18n="project2_p">This space grows every time I finish something worth showing.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="section section-alt" id="contact">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2 class="section-title" data-i18n="contact_title">Let's talk</h2>
+        <div class="title-rule"></div>
+      </div>
+
+      <p class="contact-lead" data-i18n="contact_lead">
+        Have a project, an idea, or just want to say hi? I'd love to hear from you.
+      </p>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:yassa4029@gmail.com">
+          <span class="contact-icon">&#9993;</span>
+          <span class="contact-label" data-i18n="contact_email">Email</span>
+          <span class="contact-value">yassa4029@gmail.com</span>
+        </a>
+
+        <a class="contact-card" href="tel:+201223785355">
+          <span class="contact-icon">&#9742;</span>
+          <span class="contact-label" data-i18n="contact_phone">Phone</span>
+          <span class="contact-value" dir="ltr">+20 122 378 5355</span>
+        </a>
+
+        <a class="contact-card contact-card-whatsapp" href="https://wa.me/201223785355" target="_blank" rel="noopener">
+          <span class="contact-icon">&#9680;</span>
+          <span class="contact-label">WhatsApp</span>
+          <span class="contact-value" data-i18n="contact_whatsapp_cta">Message me directly</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p><span data-i18n="footer_text">Designed &amp; built by</span> Yassy Aziz — <span id="year"></span></p>
+</footer>
+
+<!-- ===== Private area (hidden — revealed only by the secret code) ===== -->
+<section class="private-section" id="private-files" hidden>
+  <div class="private-inner">
+    <button type="button" id="private-close" class="private-close" aria-label="Close">&times;</button>
+
+    <span class="private-label" data-i18n="private_label">RESTRICTED AREA</span>
+    <h2 class="private-title" data-i18n="private_title">Private Files</h2>
+    <p class="private-sub" data-i18n="private_sub">This area is not linked anywhere on the site.</p>
+
+    <div class="private-video-card">
+      <video class="private-video" id="private-video" controls preload="metadata" playsinline>
+        <source src="private-video.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+                                                             </html>
+                
