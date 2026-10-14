@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>مفاجأة 😂</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <main class="container">
+        <button id="startButton">انقر هنا</button>
 
-        <button id="playButton">انقر هنا</button>
-
-        <video id="myVideo" playsinline>
-            <source src="video.mp4" type="video/mp4">
+        <video id="myVideo" controls playsinline preload="metadata">
+            <source src="VIDEO_FILENAME.mp4" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
         </video>
 
+        <p class="credit">By yassa</p>
+        <p id="errorMessage" role="status"></p>
     </main>
 
-    <footer>By yassa</footer>
-
     <script src="script.js"></script>
-
 </body>
-             </html>
+</html>
